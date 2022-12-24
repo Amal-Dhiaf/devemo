@@ -11,7 +11,7 @@ function Form({ handleSubmit, title, children }) {
             {children}
             <button className="w-100 btn btn-lg btn-primary mt-3" type="submit">{title}</button>
             <p className="mt-5 mb-3 text-muted">
-                Copyright &copy; <Link to='/'><b>mercado</b></Link> {new Date().getFullYear()}.
+                Copyright &copy; <Link to='/'><b>ImmoDev</b></Link> {new Date().getFullYear()}.
             </p>
         </form>
     )

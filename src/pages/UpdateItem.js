@@ -17,13 +17,14 @@ function UpdateItem() {
         title: '',
         description: '',
         photo: '',
-        price: ''
+        price: '',
+        unitsNumber: ''
     })
     const getItemById = async (id) => {
         try {
             const res = await axios.get(`${process.env.REACT_APP_API_URL}/items/${id}`)
-            const {title, description, photo, price} = res.data
-            setItemData({title, description, photo, price})
+            const {title, description, photo, price, unitsNumber} = res.data
+            setItemData({title, description, photo, price, unitsNumber})
         } catch (error) {
             alertError(error.message) 
         }
@@ -81,6 +82,13 @@ function UpdateItem() {
                     label='Price (TND)'
                     value={itemData.price}
                     name='price'
+                    onChange={handleChange}
+                    type='number'
+                />
+                <Input 
+                    label='Nombre de pièces'
+                    value={itemData.unitsNumber}
+                    name='unitsNumber'
                     onChange={handleChange}
                     type='number'
                 />

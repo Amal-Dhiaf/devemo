@@ -17,6 +17,7 @@ export default function ItemCard({ item, handleShowModal }) {
                 <div className="card-text flex-grow-1 text-truncate">
                     <Card.Title className="text-start text-truncate"> {item.title} </Card.Title>
                     <Card.Text className="text-start text-truncate"> {item.price} TND </Card.Text>
+                    <Card.Text className="text-start text-truncate"> {item.unitsNumber} Pièces </Card.Text>
                 </div>
                 {connectedUserId && item.user && connectedUserId === item.user._id && (
 

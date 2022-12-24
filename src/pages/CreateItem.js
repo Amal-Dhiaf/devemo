@@ -68,6 +68,13 @@ function CreateItem() {
                     onChange={handleChange}
                     type='number'
                 />
+                <Input 
+                    label='Nombre de pièces'
+                    value={itemData.unitsNumber}
+                    name='unitsNumber'
+                    onChange={handleChange}
+                    type='number'
+                />
                 <Button type="submit" style={{width: '100%'}}>Add</Button>
             </form>
         </div>

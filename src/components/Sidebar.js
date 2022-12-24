@@ -43,7 +43,11 @@ function Sidebar({handleShowSidebar, showSidebarOnMobile}) {
         <div className={`bg-light sidebar ${showSidebarOnMobile ? 'show-on-mobile' : ''}`}>
             <div className="d-flex flex-column flex-shrink-0 p-3 h-100">
                 <Link onClick={handleShowSidebar} to="/items" className="mb-0 me-md-auto link-dark text-decoration-none">
-                    <MercadoLogo height={36}/>
+                    {/* <MercadoLogo height={36}/> */}
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <h2 style={{ marginTop: 30 }}>ImmoDev</h2>
+                        <img src="/images/logo.png" width="100px" />
+                    </div>
                 </Link>
                 <hr />
                 <ul className="nav nav-pills flex-column mb-auto">
